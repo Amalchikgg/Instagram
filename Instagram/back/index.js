@@ -9,7 +9,7 @@ import { handleValidationErrors, checkAuth } from "./utils/index.js";
 
 const port = process.env.PORT || 4444;
 
-mongoose.connect(process.env.MONGODB_URL)
+mongoose.connect('mongodb+srv://admin:wwwwww@cluster0.x6dpnsk.mongodb.net/instagram?retryWrites=true&w=majority')
     .then(() => console.log('DB ok'))
     .catch((err) => console.log('DB error', err));
 
@@ -59,7 +59,7 @@ mongoose.connect(process.env.MONGODB_URL)
     app.get('/auth/posts/comments/:id', PostController.getPostComments);
     app.patch('/posts/:id', checkAuth, postCreateValidation, handleValidationErrors, PostController.update);
 
-app.listen(port, (err) => {
+app.listen(4444, (err) => {
     if(err) {
         return console.log(err);
     }
