@@ -55,7 +55,7 @@ console.log(data);
       <Post
         id={data._id}
         title={data.title}
-        imageUrl={data.imageUrl ? `${process.env.REACT_APP_API_URL}${data.imageUrl}` : ''}
+        imageUrl={data.imageUrl ? `https://localhost:4444${data.imageUrl}` : ''}
         user={data.user}
         createdAt={data.createdAt}
         viewsCount={data.viewsCount}
